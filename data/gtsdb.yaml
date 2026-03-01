@@ -1,0 +1,17 @@
+path: ../datasets/gtsdb_Train # dataset root dir
+train: images
+val: images
+test: 
+
+#nc: 3
+names:
+  0 : 'danger'
+  1 : 'mandatory'
+  2 : 'prohibitory'
+
+roboflow:
+  workspace: hafsa-7pztb
+  project: gtsdb-7tcsm
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/hafsa-7pztb/gtsdb-7tcsm/dataset/1
