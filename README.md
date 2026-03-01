@@ -13,7 +13,7 @@ This work is adaption from [Ultralytics/yolov5](https://github.com/ultralytics/y
 
 # Datasets used
 
-The proposed work is tested on German and Swedish traffic sign dataset. Both of the datasets are open-source and easily accesses thorugh the follwoing links:
+The proposed work is tested on German and Swedish traffic sign dataset. Both of the datasets are open-source and easily accessible thorugh the following links:
 
 [GTSDB](https://benchmark.ini.rub.de/gtsdb_dataset.html)
 
