@@ -11,7 +11,16 @@ This work is adaption from [Ultralytics/yolov5](https://github.com/ultralytics/y
 
 [Dr. Yawar Rehman] - 🌐 [Github](https://github.com/YawarGuguma) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/yawar-rehman-820118b/)
 
-# Steps
+# Datasets used
+
+The proposed work is tested on German and Swedish traffic sign dataset. Both of the datasets are open-source and easily accesses thorugh the follwoing links:
+
+[GTSDB](https://benchmark.ini.rub.de/gtsdb_dataset.html)
+
+[STS](https://www.cvl.isy.liu.se/research/datasets/traffic-signs-dataset/)
+
+
+# Usage steps
 
 You may use this code for small traffic sign detection by following these simple steps.
 
@@ -19,7 +28,7 @@ You may use this code for small traffic sign detection by following these simple
 
 2- Copy test and train images in datasets/gtsdb_Test and datasets/gtsdb_Train respectively
 
-3- Save gtsdb.yaml file in **Data** folder
+3- Generate and save .yaml file in **Data** folder
 
 4- Install dependencies, stated in [requirements.txt](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/requirements.txt)
 
