@@ -1,5 +1,7 @@
 # YOLO-FUZZ
-This repository provides modified YOLO framework with fuzzy based anchor selection for tiny traffic sign detection
+This repository provides modified YOLO framework with fuzzy based anchor selection for tiny traffic sign detection.
+
+This work is adaption from [Ultralytics/yolov5](https://github.com/ultralytics/yolov5), modifying standard YOLOv5 network for optimized detection of small traffic signs in complex road scenes.
 
 # Author
 [Hafsa Amanullah] - 🌐 [Github](https://github.com/Hafsa1918) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/hafsa-amanullah)
