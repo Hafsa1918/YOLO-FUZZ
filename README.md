@@ -4,12 +4,12 @@ This repository provides modified YOLO framework with fuzzy based anchor selecti
 This work is adaption from [Ultralytics/yolov5](https://github.com/ultralytics/yolov5), modifying standard YOLOv5 network for optimized detection of small traffic signs in complex road scenes.
 
 # Author
-[Hafsa Amanullah] - 🌐 [Github](https://github.com/Hafsa1918) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/hafsa-amanullah)
+[Hafsa Amanullah] - 🌐 [Github](https://github.com/Hafsa1918) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/hafsa-amanullah) - [Google scholar](https://scholar.google.com/citations?user=up19UMQAAAAJ&hl=en)
 
 # Collaborators
 [Prof. Dr. Min Young Kim] - 🌐 [Google scholar](https://scholar.google.com.pk/citations?user=Xhawz8EAAAAJ&hl=en)
 
-[Dr. Yawar Rehman] - 🌐 [Github](https://github.com/YawarGuguma) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/yawar-rehman-820118b/)
+[Dr. Yawar Rehman] - 🌐 [Github](https://github.com/YawarGuguma) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/yawar-rehman-820118b/) - [Google scholar](https://scholar.google.com/citations?hl=en&user=VclpjuIAAAAJ)
 
 # Datasets used
 
