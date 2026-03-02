@@ -26,7 +26,7 @@ You may use this code for small traffic sign detection by following these simple
 
 1- Estimate anchors using anchorboxSortScale_fuzzy.m file
 
-2- Copy test and train images in datasets/gtsdb_Test and datasets/gtsdb_Train respectively
+2- Copy test and train images(with .jpg file extension) in datasets/gtsdb_Test and datasets/gtsdb_Train respectively
 
 3- Generate and save .yaml file in **Data** folder
 
