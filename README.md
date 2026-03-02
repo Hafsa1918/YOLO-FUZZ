@@ -24,7 +24,7 @@ The proposed work is tested on German and Swedish traffic sign dataset. Both of 
 
 You may use this code for small traffic sign detection by following these simple steps.
 
-1- Estimate anchors using anchors.mat file
+1- Estimate anchors using anchorboxSortScale_fuzzy.m file
 
 2- Copy test and train images in datasets/gtsdb_Test and datasets/gtsdb_Train respectively
 
