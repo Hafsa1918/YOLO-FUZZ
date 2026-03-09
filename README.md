@@ -1,6 +1,4 @@
 # YOLO-FUZZ
-This repository provides modified YOLO framework with fuzzy based anchor selection for tiny traffic sign detection.
-
 YOLO-FUZZ is a specialized object detection framework designed for real-world traffic scenarios where signs occupy only 1–2% of the image resolution. This repository contains the implementation of:
 
 - **Modified YOLO Architecture:** Optimized to extract and comprehend small-scale features from vehicle dash-cam perspectives.
@@ -27,9 +25,12 @@ The proposed work is tested on German and Swedish traffic sign dataset. Both of 
 
 [STS](https://www.cvl.isy.liu.se/research/datasets/traffic-signs-dataset/)
 
-# Code 
+# Code Hierarchy
 
-The 
+**anchors** folder contains the matlab script file for anchor box generation
+**data** folder holds all dataset related files. Use gtsdb.yaml to train the model on German Traffic Sign Dataset.
+**model** folder includes the YOLO-FUZZ architecture model
+**utils** folder has all the other required function files in order to run train.py and detect.py
 
 # Usage steps
 
@@ -39,7 +40,7 @@ You may use this code for small traffic sign detection by following these simple
 
 2- Copy test and train images(with .jpg file extension) in datasets/gtsdb_Test and datasets/gtsdb_Train respectively
 
-3- Use dataset_yaml.py to generate and save gtsdb.yaml file in **Data** folder
+3- Use dataset_yaml.py to generate and save gtsdb.yaml file in **Data** folder. Generate two different files for train and test set. 
 
 4- Clone the repository
       git clone https://github.com/Hafsa1918/YOLO-FUZZ.git
