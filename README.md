@@ -9,27 +9,87 @@ YOLO-FUZZ is a specialized object detection framework designed for real-world tr
 
 This work is adaption from [Ultralytics/yolov5](https://github.com/ultralytics/yolov5), modifying standard YOLOv5 network for optimized detection of small traffic signs in complex road scenes.
 
+## Project Objective / Problem Statement
+
+YOLO-FUZZ is developed for **small traffic sign detection in real-world road scenes**, especially from vehicle dash-cam viewpoints where traffic signs often occupy only **1–2% of the full image resolution**. In such cases, standard YOLO-based detectors may struggle because very small objects are weakly represented in deeper feature maps, and conventional anchor selection methods do not adequately model the highly imbalanced size distribution of traffic signs.
+
+To address this problem, YOLO-FUZZ introduces two main contributions:  
+1. **a modified YOLO architecture** designed to better preserve and learn small-scale visual features, and  
+2. **a fuzzy-based anchor selection strategy** that accounts for size-distribution variance and long-tailed object statistics.  
+
+These modifications improve the detector’s ability to localize and recognize small traffic signs in complex road environments.
+
 ## Author
-[Hafsa Amanullah] - 🌐 [Github](https://github.com/Hafsa1918) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/hafsa-amanullah) - [Google scholar](https://scholar.google.com/citations?user=up19UMQAAAAJ&hl=en)
+[Hafsa Amanullah] - 🌐 [Github](https://github.com/Hafsa1918) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/hafsa-amanullah) - [Google scholar](https://scholar.google.com/citations?user=up19UMQAAAAJ&hl=en) - [Email](hafsa@neduet.edu.pk)
 
 ## Collaborators
 [Prof. Dr. Min Young Kim] - 🌐 [Google scholar](https://scholar.google.com.pk/citations?user=Xhawz8EAAAAJ&hl=en)
 
 [Dr. Yawar Rehman] - 🌐 [Github](https://github.com/YawarGuguma) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/yawar-rehman-820118b/) - [Google scholar](https://scholar.google.com/citations?hl=en&user=VclpjuIAAAAJ)
 
-## Datasets used
+## Dataset Details
 
-The proposed work is tested on German and Swedish traffic sign dataset. Both of the datasets are open-source and easily accessible through the following links:
+The proposed method is evaluated on two publicly available traffic sign datasets:
 
-[GTSDB](https://benchmark.ini.rub.de/gtsdb_dataset.html)
+### 1. German Traffic Sign Detection Benchmark (GTSDB)
+- **Full name:** German Traffic Sign Detection Benchmark (GTSDB)  
+- **Official source:** [GTSDB](https://benchmark.ini.rub.de/gtsdb_dataset.html)
+- **Dataset type:** Traffic sign detection  
+- **Number of images:** 900 images  
+- **Official split:** 600 training images and 300 evaluation images  
+- **Number of classes/categories:** 43 traffic sign classes, grouped into major detection categories such as prohibitory, mandatory, and danger signs  
+- **Image format in the original release:** `.ppm`  
+- **Annotation format in the original release:** `.csv` files containing filename, ROI coordinates, and class ID  
+- **Usage in this repository:** Images are converted to `.jpg` format when needed, and annotations are prepared for YOLO-based training and evaluation  
 
-[STS](https://www.cvl.isy.liu.se/research/datasets/traffic-signs-dataset/)
+### 2. Swedish Traffic Signs Dataset (STSD)
+- **Full name:** Swedish Traffic Signs Dataset (STSD)  
+- **Official source:** [STS dataset] (https://www.cvl.isy.liu.se/research/datasets/traffic-signs-dataset/) 
+- **Dataset type:** Traffic sign detection  
+- **Number of images:** more than 20,000 images  
+- **Labeled subset:** approximately 20% labeled  
+- **Number of traffic signs:** 3,488 annotated traffic signs  
+- **Road coverage:** collected from more than 350 km of Swedish roads  
+- **Number of classes:** 3  
+
+### Notes on Data Preparation
+- All images should be stored in **`.jpg`** format before training.  
+- For **GTSDB**, the original `.ppm` images may need to be converted to `.jpg`.  
+- No additional preprocessing is required beyond annotation formatting and dataset organization for training/testing.  
+- Dataset YAML files are generated to define image paths, class names, and split configuration for YOLO-FUZZ training.
+
+## Requirements / Environment Details
+
+This repository is based on **Ultralytics YOLOv5** and requires a standard PyTorch-based deep learning environment.
+
+### Minimum software requirements
+- **Python:** 3.8 or later  
+- **PyTorch:** 1.8.0 or later  
+- **Torchvision:** 0.9.0 or later  
+
+### Main Python dependencies
+The core dependencies are listed in `requirements.txt`, including:
+- `numpy`
+- `opencv-python`
+- `matplotlib`
+- `Pillow`
+- `PyYAML`
+- `scipy`
+- `tqdm`
+- `pandas`
+- `seaborn`
+- `thop`
+
+### Tested environment
+
+The training and testing of models is conducted on Google CoLab using Tesla T4 GPU having 16GB RAM.
+
+### Installation
+Install all required packages using:
+
+      pip install -r requirements.txt
 
 ## Methodology
-
-**Data pre-processing**
-
-Makesure all the dataset files are in .jpg file extension. For German Dataset, you might need to convert .ppm files to .jpg files. NO further propocessing is required.
 
 **Fuzzy Anchor Selection**
 
@@ -46,6 +106,8 @@ Modified YOLO layers and heads specifically tuned to detect small traffic signs 
 **data** folder holds all dataset related files. Use gtsdb.yaml to train the model on German Traffic Sign Dataset.
 
 **model** folder includes the YOLO-FUZZ architecture model
+
+**run** folder stores the trained model weights and test dataset results
 
 **utils** folder has all the other required function files in order to run train.py and detect.py
 
@@ -85,6 +147,21 @@ You may use this code for small traffic sign detection by following these simple
 2- The test results will be saved to ./runs/detect/ path.
       
 ## Results
+
+### Quantative results
+---------------------------------------------------------
+| Method used | mAP| Recall | Precision | Frame per second |
+----------------------------------------------------------
+| SegU-Net | - | 89% | 95% | - |
+------------------------------
+| YOLOv5 | - | 89% | 93% | - |
+------------------------------
+| YOLOv5s-A2 | 94% | 90% | - | 105 |
+------------------------------
+| YOLOF-F | 74% | - | - | 32 |
+------------------------------
+| YOLO-FUZZ | 83% | 87% | 65% | 145 |
+------------------------------
 
 ### Test results of the proposed algorithm on German Traffic Sign Dataset Benchmark
 ![amanu8](https://github.com/ha007-aman/SmallObjectDetection/assets/73087518/480464da-9626-47aa-b4b3-7fa2e479ae8b)
