@@ -148,19 +148,15 @@ You may use this code for small traffic sign detection by following these simple
       
 ## Results
 
-### Quantative results
----------------------------------------------------------
-| Method used | mAP| Recall | Precision | Frame per second |
-----------------------------------------------------------
-| SegU-Net | - | 89% | 95% | - |
-------------------------------
-| YOLOv5 | - | 89% | 93% | - |
-------------------------------
-| YOLOv5s-A2 | 94% | 90% | - | 105 |
-------------------------------
-| YOLOF-F | 74% | - | - | 32 |
-------------------------------
-| YOLO-FUZZ | 83% | 87% | 65% | 145 |
+### Performance Comparison
+
+| Method Used | mAP | Recall | Precision | FPS |
+| :--- | :---: | :---: | :---: | :---: |
+| **SegU-Net** | - | 89% | 95% | - |
+| **YOLOv5** | - | 89% | 93% | - |
+| **YOLOv5s-A2** | 94% | 90% | - | 105 |
+| **YOLOF-F** | 74% | - | - | 32 |
+| **YOLO-FUZZ** | 83% | 87% | 65% | 145 |
 ------------------------------
 
 ### Test results of the proposed algorithm on German Traffic Sign Dataset Benchmark
