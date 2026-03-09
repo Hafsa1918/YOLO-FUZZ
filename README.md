@@ -1,6 +1,14 @@
 # YOLO-FUZZ
 This repository provides modified YOLO framework with fuzzy based anchor selection for tiny traffic sign detection.
 
+YOLO-FUZZ is a specialized object detection framework designed for real-world traffic scenarios where signs occupy only 1–2% of the image resolution. This repository contains the implementation of:
+
+- **Modified YOLO Architecture:** Optimized to extract and comprehend small-scale features from vehicle dash-cam perspectives.
+
+- **Fuzzy-Based Anchor Selection:** A novel method that uses size distribution variance to address long-tailed dataset challenges.
+
+- **Benchmarked Results:** High-performance detection validated on the German (GTSDB) and Swedish (STSD) traffic sign datasets.
+
 This work is adaption from [Ultralytics/yolov5](https://github.com/ultralytics/yolov5), modifying standard YOLOv5 network for optimized detection of small traffic signs in complex road scenes.
 
 # Author
@@ -19,6 +27,9 @@ The proposed work is tested on German and Swedish traffic sign dataset. Both of 
 
 [STS](https://www.cvl.isy.liu.se/research/datasets/traffic-signs-dataset/)
 
+# Code 
+
+The 
 
 # Usage steps
 
@@ -28,15 +39,22 @@ You may use this code for small traffic sign detection by following these simple
 
 2- Copy test and train images(with .jpg file extension) in datasets/gtsdb_Test and datasets/gtsdb_Train respectively
 
-3- Generate and save .yaml file in **Data** folder
+3- Use dataset_yaml.py to generate and save gtsdb.yaml file in **Data** folder
 
-4- Install dependencies, stated in [requirements.txt](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/requirements.txt)
+4- Clone the repository
+      git clone https://github.com/Hafsa1918/YOLO-FUZZ.git
+      cd YOLO-FUZZ
 
-5- Use [train.py](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/train.py) to train your network. 
+5-  Install dependencies stated in [requirements.txt](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/requirements.txt)
+      pip install -r requirements.txt 
+
+6- Use [train.py](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/train.py) to train your network. 
+      python train.py
 
 6- Use [detect.py](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/detect.py) to test the trained network with test images.
+      python detect.py
 
-
+## Results
 
 # Test results of the proposed algorithm on German Traffic Sign Dataset Benchmark
 ![amanu8](https://github.com/ha007-aman/SmallObjectDetection/assets/73087518/480464da-9626-47aa-b4b3-7fa2e479ae8b)
@@ -47,3 +65,11 @@ Traffic sign detection in GTSDB dataset (a) Traffic sign size variation in an im
 ![amanu9](https://github.com/ha007-aman/SmallObjectDetection/assets/73087518/66cc4035-8c93-49fc-b995-a302b03383d7)
 
 Traffic sign detection in STS dataset (a-c) Small-sized traffic sign detection (d) A large-sized traffic sign detection
+
+# Citation
+
+If you use this code or the YOLO-FUZZ architecture in your research, please cite our PeerJ paper: [DOI we will shared soon]
+
+# License
+
+This project is open-access and available under the gpl-3.0 License
