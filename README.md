@@ -9,15 +9,15 @@ YOLO-FUZZ is a specialized object detection framework designed for real-world tr
 
 This work is adaption from [Ultralytics/yolov5](https://github.com/ultralytics/yolov5), modifying standard YOLOv5 network for optimized detection of small traffic signs in complex road scenes.
 
-# Author
+## Author
 [Hafsa Amanullah] - 🌐 [Github](https://github.com/Hafsa1918) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/hafsa-amanullah) - [Google scholar](https://scholar.google.com/citations?user=up19UMQAAAAJ&hl=en)
 
-# Collaborators
+## Collaborators
 [Prof. Dr. Min Young Kim] - 🌐 [Google scholar](https://scholar.google.com.pk/citations?user=Xhawz8EAAAAJ&hl=en)
 
 [Dr. Yawar Rehman] - 🌐 [Github](https://github.com/YawarGuguma) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/yawar-rehman-820118b/) - [Google scholar](https://scholar.google.com/citations?hl=en&user=VclpjuIAAAAJ)
 
-# Datasets used
+## Datasets used
 
 The proposed work is tested on German and Swedish traffic sign dataset. Both of the datasets are open-source and easily accessible through the following links:
 
@@ -25,7 +25,7 @@ The proposed work is tested on German and Swedish traffic sign dataset. Both of 
 
 [STS](https://www.cvl.isy.liu.se/research/datasets/traffic-signs-dataset/)
 
-# Methodology
+## Methodology
 
 **Data pre-processing**
 
@@ -39,7 +39,7 @@ Unlike standard K-means clustering for anchors, our Fuzzy method considers the v
 
 Modified YOLO layers and heads specifically tuned to detect small traffic signs in a complex road scenes. 
 
-# Code Hierarchy
+## Code Hierarchy
 
 **anchors** folder contains the matlab script file for anchor box generation
 
@@ -49,15 +49,15 @@ Modified YOLO layers and heads specifically tuned to detect small traffic signs 
 
 **utils** folder has all the other required function files in order to run train.py and detect.py
 
-# Usage steps
+### Usage steps
 
-You may use this code for small traffic sign detection by following these simple steps.
+You may use this code for small traffic sign detection by following these simple steps. Please note same steps will be used for any other traffic sign dataset as well, for tutorial purpose, german dataset is quoted here.
 
 1- Estimate anchors using anchorboxSortScale_fuzzy.m file
 
 2- Copy test and train images(with .jpg file extension) in datasets/gtsdb_Test and datasets/gtsdb_Train respectively
 
-3- Use dataset_yaml.py to generate and save gtsdb.yaml file in **Data** folder. Generate two different files for train and test set. 
+3- Use dataset_yaml.py to generate .yaml file for train (gtsdb.yaml) and test(gtsdb_test.yaml) images. Save both the files in **Data** folder. 
 
 4- Clone the repository
 
@@ -68,13 +68,21 @@ You may use this code for small traffic sign detection by following these simple
 
       pip install -r requirements.txt 
 
-6- Use [train.py](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/train.py) to train your network. 
+#### Training
+
+1- Use gtsdb.yaml (generted using train dataset) to train the network, using [train.py](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/train.py). 
 
       python train.py --img 416 --data gtsdb.yaml --weights yolov5s.pt --noautoanchor 
 
-6- Use [detect.py](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/detect.py) to test the trained network with test images.
+2- The trained model weights will be saved to ./run/train/exp/ path.
+
+#### Testing
+
+1- Use [detect.py](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/detect.py) to test the trained network with test images. Add the path of test-images, and true test results in terms of .yaml file to calculate AP for each class.
 
       python detect.py --data data/gtsdb_test.yaml --source ../datasets/gtsdb_Test
+
+2- The test results will be saved to ./runs/detect/ path.
       
 ## Results
 
