@@ -20,7 +20,7 @@ To address this problem, YOLO-FUZZ introduces two main contributions:
 These modifications improve the detector’s ability to localize and recognize small traffic signs in complex road environments.
 
 ## Author
-[Hafsa Amanullah] - 🌐 [Github](https://github.com/Hafsa1918) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/hafsa-amanullah) - [Google scholar](https://scholar.google.com/citations?user=up19UMQAAAAJ&hl=en) - [Email](hafsa@neduet.edu.pk)
+[Hafsa Amanullah] - 🌐 [Github](https://github.com/Hafsa1918) - 🌐 [LinkedIn Profile](https://www.linkedin.com/in/hafsa-amanullah) - [Google scholar](https://scholar.google.com/citations?user=up19UMQAAAAJ&hl=en) - [Email - hafsa@neduet.edu.pk]
 
 ## Collaborators
 [Prof. Dr. Min Young Kim] - 🌐 [Google scholar](https://scholar.google.com.pk/citations?user=Xhawz8EAAAAJ&hl=en)
