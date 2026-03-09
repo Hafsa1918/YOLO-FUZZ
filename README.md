@@ -25,6 +25,20 @@ The proposed work is tested on German and Swedish traffic sign dataset. Both of 
 
 [STS](https://www.cvl.isy.liu.se/research/datasets/traffic-signs-dataset/)
 
+# Methodology
+
+**Data pre-processing**
+
+Makesure all the dataset files are in .jpg file extension. For German Dataset, you might need to convert .ppm files to .jpg files. NO further propocessing is required.
+
+**Fuzzy Anchor Selection**
+
+Unlike standard K-means clustering for anchors, our Fuzzy method considers the variance in size distribution. This allows the network to adapt to the inherent imbalance (long-tail) of traffic sign occurrences in different geographical datasets.
+
+**YOLO-FUZZ**
+
+Modified YOLO layers and heads specifically tuned to detect small traffic signs in a complex road scenes. 
+
 # Code Hierarchy
 
 **anchors** folder contains the matlab script file for anchor box generation
