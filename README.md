@@ -86,20 +86,26 @@ You may use this code for small traffic sign detection by following these simple
       
 ## Results
 
-# Test results of the proposed algorithm on German Traffic Sign Dataset Benchmark
+### Test results of the proposed algorithm on German Traffic Sign Dataset Benchmark
 ![amanu8](https://github.com/ha007-aman/SmallObjectDetection/assets/73087518/480464da-9626-47aa-b4b3-7fa2e479ae8b)
 
 Traffic sign detection in GTSDB dataset (a) Traffic sign size variation in an image (b \& d) Small traffic sign detection (c) A larger traffic sign recognition
 
-# Test results of the proposed algorithm on Swedish Traffic Sign Dataset 
+### Test results of the proposed algorithm on Swedish Traffic Sign Dataset 
 ![amanu9](https://github.com/ha007-aman/SmallObjectDetection/assets/73087518/66cc4035-8c93-49fc-b995-a302b03383d7)
 
 Traffic sign detection in STS dataset (a-c) Small-sized traffic sign detection (d) A large-sized traffic sign detection
 
-# Citation
+## Contributiing
 
-If you use this code or the YOLO-FUZZ architecture in your research, please cite our PeerJ paper: [DOI we will shared soon]
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-# License
+Please read our [CONTRIBUTING.md](link-to-your-file) for details on our code of conduct and the process for submitting pull requests.
+
+## Citation
+
+If you use this code or the YOLO-FUZZ architecture in your research, please cite our PeerJ paper: [Citations will be updated after publication]
+
+## License
 
 This project is open-access and available under the gpl-3.0 License
