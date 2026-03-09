@@ -28,8 +28,11 @@ The proposed work is tested on German and Swedish traffic sign dataset. Both of 
 # Code Hierarchy
 
 **anchors** folder contains the matlab script file for anchor box generation
+
 **data** folder holds all dataset related files. Use gtsdb.yaml to train the model on German Traffic Sign Dataset.
+
 **model** folder includes the YOLO-FUZZ architecture model
+
 **utils** folder has all the other required function files in order to run train.py and detect.py
 
 # Usage steps
@@ -43,18 +46,22 @@ You may use this code for small traffic sign detection by following these simple
 3- Use dataset_yaml.py to generate and save gtsdb.yaml file in **Data** folder. Generate two different files for train and test set. 
 
 4- Clone the repository
+
       git clone https://github.com/Hafsa1918/YOLO-FUZZ.git
       cd YOLO-FUZZ
 
 5-  Install dependencies stated in [requirements.txt](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/requirements.txt)
+
       pip install -r requirements.txt 
 
 6- Use [train.py](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/train.py) to train your network. 
-      python train.py
+
+      python train.py --img 416 --data gtsdb.yaml --weights yolov5s.pt --noautoanchor 
 
 6- Use [detect.py](https://github.com/Hafsa1918/YOLO-FUZZ/blob/main/detect.py) to test the trained network with test images.
-      python detect.py
 
+      python detect.py --data data/gtsdb_test.yaml --source ../datasets/gtsdb_Test
+      
 ## Results
 
 # Test results of the proposed algorithm on German Traffic Sign Dataset Benchmark
