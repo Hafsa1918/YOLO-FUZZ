@@ -173,7 +173,7 @@ Traffic sign detection in STS dataset (a-c) Small-sized traffic sign detection (
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-Please read our [CONTRIBUTIONs.md](CONNTRIBUTIONS.md) for details on our code of conduct and the process for submitting pull requests.
+Please read our [CONTRIBUTIONS.md](CONNTRIBUTIONS.md) for details on our code of conduct and the process for submitting pull requests.
 
 ## Citation
 
