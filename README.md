@@ -177,7 +177,7 @@ Please read our [CONTRIBUTIONS.md](CONNTRIBUTIONS.md) for details on our code of
 
 ## Citation
 
-If you use this code or the YOLO-FUZZ architecture in your research, please cite our PeerJ paper: [Citations will be updated after publication]
+If you use this code or the YOLO-FUZZ architecture in your research, please cite our Github page. For paper citations will be updated after publication. Thank you.
 
 ## License
 
