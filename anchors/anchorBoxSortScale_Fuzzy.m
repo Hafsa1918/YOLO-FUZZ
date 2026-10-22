@@ -6,6 +6,8 @@
 
 gtbbs = gtbbsSTS;
 
+% turn any one one of the following
+
 % G1 = (gtbbs(:,1) <= 32); % group small => Anchors=3
 % G1 = (gtbbs(:,1) >= 33 & gtbbs(:,1) <= 96); % group medium => Anchors=5
 % G1 = (gtbbs(:,1) >= 97); % group large => Anchors=1
