@@ -4,7 +4,7 @@
 % % % load gtbbs;       % for loading GTSD annotations
 % % % load gtbbsSTS;    % for loading STS annotations
 
-(* gtbbs = gtbbsSTS; *)
+gtbbs = gtbbsSTS;
 
 % G1 = (gtbbs(:,1) <= 32); % group small => Anchors=3
 % G1 = (gtbbs(:,1) >= 33 & gtbbs(:,1) <= 96); % group medium => Anchors=5
